@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5bb47b44-484b-460c-bf94-8bb20f555790" name="Default" comment="Login to gmail completed">
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/lucaskamy/cucumber/StepDefinitions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/lucaskamy/cucumber/StepDefinitions.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,7 +18,7 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.5490909">
+    <splitter split-orientation="vertical" split-proportion="0.4842615">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -31,7 +32,7 @@
             <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="170">
-                  <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+                  <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -55,8 +56,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="28">
-                  <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
+                <state>
+                  <caret column="31" lean-forward="true" selection-start-column="31" selection-end-column="31" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -100,8 +101,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1914" />
-    <option name="width" value="1937" />
+    <option name="x" value="1909" />
+    <option name="width" value="1940" />
     <option name="height" value="2124" />
   </component>
   <component name="ProjectView">
@@ -201,12 +202,17 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552220910163" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552230589520" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lucasb.kamym.428" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35402298" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Eks dee\git\lucaskamycucumber\tools" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -292,51 +298,51 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552143002376</updated>
-      <workItem from="1552216712664" duration="4177000" />
+      <workItem from="1552216712664" duration="7973000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Feature__email - 2019.03.10 at 08h 00m 40s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 09h 07m 39s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 07m 18s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 09h 09m 05s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 10m 28s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 09h 09m 22s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 11m 14s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 09h 09m 51s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 16m 39s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 09h 10m 37s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 17m 01s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 11h 06m 29s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 17m 28s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 11h 08m 28s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 20m 39s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 11h 08m 48s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 21m 37s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 11h 09m 07s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
-    <history-entry file="Feature__email - 2019.03.10 at 08h 22m 53s.xml">
+    <history-entry file="Feature__email - 2019.03.10 at 11h 09m 27s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4177000" />
+    <option name="totallyTimeSpent" value="7973000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1276" y="0" width="1291" height="1416" extended-state="0" />
+    <frame x="1273" y="0" width="1293" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24207962" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24168694" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,8 +360,8 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943925" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Run" order="11" weight="0.35669783" />
-      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.19859813" />
+      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.35669783" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.19859813" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
@@ -399,7 +405,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
+          <caret line="43" column="34" lean-forward="true" selection-start-line="43" selection-start-column="34" selection-end-line="43" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

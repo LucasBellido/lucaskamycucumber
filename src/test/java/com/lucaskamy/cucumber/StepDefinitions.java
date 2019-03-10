@@ -8,6 +8,7 @@ import cucumber.annotation.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,6 +18,7 @@ public class StepDefinitions {
 
     private WebDriver driver;
     private WebDriverWait wait;
+    private Actions action;
     private final String PATH_TO_CHROME_DRIVER = "tools/chromedriver.exe";
     private final String EMAIL_URL = "https://mail.google.com/mail/u/0/#inbox";
 
@@ -33,13 +35,16 @@ public class StepDefinitions {
     @When("^I press \"Compose\"")
     public void test2() throws Throwable{
         setupSeleniumWebDrivers();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#\\3a 41 > div > div"))).click();
 
     }
 
     @And("^Attach an Image")
     public void test3() throws Throwable{
         setupSeleniumWebDrivers();
-
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#\\3a an"))).click();
+        action.moveToElement(wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#\3a o > div > div.Mf-Cp-Qk-rb-Ij")))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#picker\\3a ap\\3a 0"))).click();
     }
 
     @And("^Enter a valid recipient")
@@ -68,7 +73,8 @@ public class StepDefinitions {
             System.out.println("Setting up ChromeDriver... ");
             System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME_DRIVER);
             driver = new ChromeDriver();
-            wait = new WebDriverWait(driver, 10);
+            wait = new WebDriverWait(driver, 15);
+            action = new Actions(driver);
             System.out.print("Done!\n");
         }
     }
