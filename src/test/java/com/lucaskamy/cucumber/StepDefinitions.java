@@ -75,15 +75,15 @@ public class StepDefinitions {
         System.out.println("Looking for send button \n");
 
         driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("ms-Image-image.is-loaded"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord(Keys.CONTROL, Keys.RETURN));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord("Hello Kamy, Hope you enjoy this cucumber picture as much as I do", Keys.CONTROL, Keys.RETURN));
 
         System.out.println("send button pressed\n");
     }
 
-    @And("^A \"Message Sent\" popup exists")
-    public void test6() throws Throwable{
+    @And("^The message successfully sends")
+    public void test7() throws Throwable{
         setupSeleniumWebDrivers();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div")));
 
     }
 
