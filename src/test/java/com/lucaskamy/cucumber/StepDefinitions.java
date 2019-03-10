@@ -7,7 +7,6 @@ import cucumber.annotation.en.Then;
 import cucumber.annotation.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,18 +16,51 @@ import java.net.MalformedURLException;
 public class StepDefinitions {
 
     private WebDriver driver;
-    private final String PATH_TO_CHROME_DRIVER = "D:\\ChromeDriver";
-    private final String EMAIL_URL = "";
-    private final String DELETE_BTN_NAME = "submit.delete.C3NLW69582M4B4";
-    private final String CART_URL = "https://www.amazon.ca/gp/cart/view.html/ref=nav_cart";
-    private final String ADD_TO_CART_BTN = "add-to-cart-button";
-    private final String ACTIVE_CART = "sc-active-cart";
-    private final String CHECKOUT_BTN = "sc-proceed-to-checkout";
+    private WebDriverWait wait;
+    private final String PATH_TO_CHROME_DRIVER = "chromedriver.exe";
+    private final String EMAIL_URL = "https://mail.google.com/mail/u/0/#inbox";
 
-    public void test1() throws Throwable{
+    @Given("^I am on the Gmail main page")
+    public void loginToGmail() throws Throwable{
         setupSeleniumWebDrivers();
         goTo(EMAIL_URL);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("identifierId"))).sendKeys("123Cucumber123");
+        driver.findElement(By.id("identifierNext")).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input[type='password']"))).sendKeys("123Cucumber!");
+        driver.findElement(By.id("passwordNext")).click();
     }
+
+    @When("^I press \"Compose\"")
+    public void test2() throws Throwable{
+        setupSeleniumWebDrivers();
+
+    }
+
+    @And("^Attach an Image")
+    public void test3() throws Throwable{
+        setupSeleniumWebDrivers();
+
+    }
+
+    @And("^Enter a valid recipient")
+    public void test4() throws Throwable{
+        setupSeleniumWebDrivers();
+
+    }
+
+    @Then("^I should be able to press \"Send\"")
+    public void test5() throws Throwable{
+        setupSeleniumWebDrivers();
+
+    }
+
+    @And("^A \"Message Sent\" popup exists")
+
+    public void test6() throws Throwable{
+        setupSeleniumWebDrivers();
+
+    }
+
 
 
     private void setupSeleniumWebDrivers() throws MalformedURLException {
@@ -36,6 +68,7 @@ public class StepDefinitions {
             System.out.println("Setting up ChromeDriver... ");
             System.setProperty("webdriver.chrome.driver", PATH_TO_CHROME_DRIVER);
             driver = new ChromeDriver();
+            wait = new WebDriverWait(driver, 10);
             System.out.print("Done!\n");
         }
     }
