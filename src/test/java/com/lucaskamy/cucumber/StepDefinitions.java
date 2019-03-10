@@ -17,7 +17,7 @@ public class StepDefinitions {
 
     private WebDriver driver;
     private WebDriverWait wait;
-    private final String PATH_TO_CHROME_DRIVER = "chromedriver.exe";
+    private final String PATH_TO_CHROME_DRIVER = "tools/chromedriver.exe";
     private final String EMAIL_URL = "https://mail.google.com/mail/u/0/#inbox";
 
     @Given("^I am on the Gmail main page")

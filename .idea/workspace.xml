@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5bb47b44-484b-460c-bf94-8bb20f555790" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lucaskamycucumber.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lucaskamycucumber.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="5bb47b44-484b-460c-bf94-8bb20f555790" name="Default" comment="Login to gmail completed">
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/tools/chromedriver.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/resources/email.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/resources/email.feature" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +30,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+                <state relative-caret-position="170">
+                  <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -49,7 +43,7 @@
             <entry file="file://$PROJECT_DIR$/src/test/java/resources/email.feature">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="85">
-                  <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+                  <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
                 </state>
               </provider>
             </entry>
@@ -61,8 +55,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-27">
-                  <caret line="60" column="34" lean-forward="true" selection-start-line="60" selection-start-column="34" selection-end-line="60" selection-end-column="34" />
+                <state relative-caret-position="28">
+                  <caret line="70" column="45" selection-start-line="70" selection-start-column="45" selection-end-line="70" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -82,6 +76,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="ogKamy" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -188,6 +187,11 @@
               <item name="compile" type="462c0819:PsiDirectoryNode" />
               <item name="default-compile" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="lucaskamycucumber" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lucaskamycucumber" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -197,7 +201,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552220580181" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552220910163" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lucasb.kamym.428" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -288,14 +292,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1552143002376</updated>
-      <workItem from="1552216712664" duration="3814000" />
+      <workItem from="1552216712664" duration="4177000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Feature__email - 2019.03.10 at 07h 59m 48s.xml">
-      <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
-    </history-entry>
     <history-entry file="Feature__email - 2019.03.10 at 08h 00m 40s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
@@ -323,16 +324,19 @@
     <history-entry file="Feature__email - 2019.03.10 at 08h 21m 37s.xml">
       <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
     </history-entry>
+    <history-entry file="Feature__email - 2019.03.10 at 08h 22m 53s.xml">
+      <configuration name="Feature: email" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3814000" />
+    <option name="totallyTimeSpent" value="4177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1276" y="0" width="1291" height="1416" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Learn" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24207962" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24207962" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
@@ -350,8 +354,8 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943925" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" anchor="bottom" id="Run" order="11" visible="true" weight="0.35669783" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.19859813" />
+      <window_info anchor="bottom" id="Run" order="11" weight="0.35669783" />
+      <window_info anchor="bottom" id="Messages" order="12" visible="true" weight="0.19859813" />
       <window_info anchor="right" id="Maven" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="Commander" order="2" weight="0.4" />
@@ -367,6 +371,10 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Login to gmail completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login to gmail completed" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/resources/email/feature.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -376,22 +384,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/resources/email.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lucaskamycucumber.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/resources/email.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/lucaskamy/cucumber/StepDefinitions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="24" column="34" lean-forward="true" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state relative-caret-position="170">
+          <caret line="19" column="56" selection-start-line="19" selection-start-column="56" selection-end-line="19" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
