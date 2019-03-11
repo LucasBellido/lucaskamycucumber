@@ -16,7 +16,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.net.MalformedURLException;
 
 public class StepDefinitions {
-
+    /*
+     *  PRIVATE VARIABLES
+     */
     private WebDriver driver;
     private WebDriverWait wait;
     private Actions action;
@@ -24,18 +26,23 @@ public class StepDefinitions {
     private final String EMAIL_URL = "https://mail.google.com/mail/u/0/#inbox";
     private final String OUTLOOK_URL = "https://outlook.office.com/mail/inbox";
 
-
+    /*
+     *  GIVEN
+     */
     @Given("^I am on the Outlook main page")
     public void loginToOutlook() throws Throwable{
         setupSeleniumWebDrivers();
         goTo(OUTLOOK_URL);
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"i0116\"]"))).sendKeys("seyed.moussavikafi@mail.mcgill.ca");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"i0116\"]"))).sendKeys("");
         driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"passwordInput\"]"))).sendKeys("123kafi123");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"passwordInput\"]"))).sendKeys("");
         driver.findElement(By.xpath("//*[@id=\"submitButton\"]")).click();
         driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
     }
 
+    /*
+     *  WHEN
+     */
     @When("^I press \"New Message\"")
     public void test2() throws Throwable{
         setupSeleniumWebDrivers();
@@ -49,10 +56,13 @@ public class StepDefinitions {
     public void test22() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("Searching for draft button\n");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[4]/div"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div[1]/div[2]/div[3]/div"))).click();
         System.out.println("draft button found\n");
     }
 
+    /*
+     *  AND
+     */
     @And("^Attach an Image")
     public void test3() throws Throwable {
         setupSeleniumWebDrivers();
@@ -75,11 +85,11 @@ public class StepDefinitions {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[4]/div[2]/div[2]/div/div/div/div/div[1]/div/button/div"))).click();
         System.out.println("insert image button clicked\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#id__1209-menu > div > ul > li:nth-child(2) > button > div"))).click();
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[13]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[8]/div/div"))).click(); //click on picture to select it
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[8]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[8]/div/div/div[2]/div[2]/span"))).click(); //click on picture to select it
         System.out.println("picture selected\n");
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[8]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/button"))).click(); //insert button
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[10]/div/div/div/div[2]/div/div/div/div[4]/button[1]"))).click();
+
         System.out.println("insert button clicked \n");
     }
 
@@ -114,16 +124,6 @@ public class StepDefinitions {
         System.out.println("Subject and Recipient Entered \n");
     }
 
-    @Then("^I should be able to press \"Send\"")
-    public void test5() throws Throwable{
-        setupSeleniumWebDrivers();
-        System.out.println("Looking for send button \n");
-
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord("Hello Kamy, Hope you enjoy this cucumber picture as much as I do. It's my favorite one. I took it myself, on a summer day, right after waking up.", Keys.CONTROL, Keys.RETURN));
-
-        System.out.println("send button pressed\n");
-    }
-
     @And("^The message successfully sends")
     public void test7() throws Throwable{
         setupSeleniumWebDrivers();
@@ -132,18 +132,11 @@ public class StepDefinitions {
         cleanupSeleniumWebDrivers();
     }
 
-    @Then("^I shouldn’t be able to add the image as attachment")
-    public void test72() throws Throwable{
-        setupSeleniumWebDrivers();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"MessageBar1526\"]/span/span")));
-        cleanupSeleniumWebDrivers();
-    }
-
     @And("^a previous draft of my valid email exists")
     public void test122() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("looking for existing draft\n");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AQAAAAAAAQ8BAAABuHB8pQAAAAA=\"]"))).click();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AQAAAAAAAQ8BAAABuHB8xgAAAAA=\"]"))).click();
         System.out.println("latest message pressed\n");
     }
 
@@ -156,8 +149,31 @@ public class StepDefinitions {
         cleanupSeleniumWebDrivers();
     }
 
-    @When("^I press \"Draft\"")
+    /*
+     *  THEN
+     */
+    @Then("^I shouldn’t be able to add the image as attachment")
+    public void test72() throws Throwable{
+        setupSeleniumWebDrivers();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"MessageBar1425\"]")));
+
+        cleanupSeleniumWebDrivers();
+    }
+
+    @Then("^I should be able to press \"Send\"")
+    public void test5() throws Throwable{
+        setupSeleniumWebDrivers();
+        System.out.println("Looking for send button \n");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord("Hello Kamy, Hope you enjoy this cucumber picture as much as I do. It's my favorite one. I took it myself, on a summer day, right after waking up.", Keys.CONTROL, Keys.RETURN));
+
+        System.out.println("send button pressed\n");
+    }
+
+    /*
+     *  SETTING UP THE ENVIRONMENT BEFORE EACH TEST
+     */
     private void setupSeleniumWebDrivers() throws MalformedURLException {
         if (driver == null) {
             System.out.println("Setting up ChromeDriver... ");
@@ -169,11 +185,16 @@ public class StepDefinitions {
         }
     }
 
+    /*
+     *  CLEANING UP THE ENVIRONMENT AFTER EACH TEST
+     */
     private void cleanupSeleniumWebDrivers() {
         driver.quit();
     }
 
-
+    /*
+     *  METHOD TO GO TO A WEB URL
+     */
     private void goTo(String url) {
         if (driver != null) {
             System.out.println("Going to " + url);

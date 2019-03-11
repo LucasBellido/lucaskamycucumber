@@ -8,7 +8,6 @@ Feature: Email
     Then I should be able to press "Send"
     And The message successfully sends
 
-
   Scenario: Sending an email after attaching an image as OneDrive Link
     Given I am on the Outlook main page
     When I press "New Message"
