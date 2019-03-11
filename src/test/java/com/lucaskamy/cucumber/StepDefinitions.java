@@ -14,7 +14,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.net.MalformedURLException;
-import java.util.concurrent.TimeUnit;
 
 public class StepDefinitions {
 
@@ -26,8 +25,8 @@ public class StepDefinitions {
     private final String OUTLOOK_URL = "https://outlook.office.com/mail/inbox";
 
 
-    @Given("^I am on the Gmail main page")
-    public void loginToGmail() throws Throwable{
+    @Given("^I am on the Outlook main page")
+    public void loginToOutlook() throws Throwable{
         setupSeleniumWebDrivers();
         goTo(OUTLOOK_URL);
        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"i0116\"]"))).sendKeys("seyed.moussavikafi@mail.mcgill.ca");
@@ -37,7 +36,7 @@ public class StepDefinitions {
       driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
     }
 
-    @When("^I press \"Compose\"")
+    @When("^I press \"New Message\"")
     public void test2() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("Searching for compose button\n");
@@ -61,10 +60,33 @@ public class StepDefinitions {
         System.out.println("insert button clicked \n");
     }
 
+    @And("^Attach an Image as OneDrive Link")
+    public void test31() throws Throwable {
+        setupSeleniumWebDrivers();
+        System.out.println("Looking for insert image\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[4]/div[2]/div[2]/div/div/div/div/div[1]/div/button/div"))).click();
+        System.out.println("insert image button clicked\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#id__1209-menu > div > ul > li:nth-child(2) > button > div"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[8]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[2]/div/div/div/div/div/div[2]/div/div/div/div/div/div[7]/div/div"))).click(); //click on picture to select it
+        System.out.println("picture selected\n");
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[8]/div/div/div/div[2]/div/div/div/div[2]/div[2]/div[3]/div/button"))).click(); //insert button
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[10]/div/div/div/div[2]/div/div/div/div[3]/button[1]"))).click();
+        System.out.println("insert button clicked \n");
+    }
+
     @And("^Enter a valid recipient")
     public void test4() throws Throwable{
         setupSeleniumWebDrivers();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/div[1]/div/div/input"))).sendKeys("kamy.moussavikafi@mail.mcgill.ca");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"subjectLine0\"]"))).sendKeys("Spam Kamy with Cucumbers");
+        System.out.println("Subject and Recipient Entered \n");
+    }
+
+    @And("^Enter an invalid recipient")
+    public void test41() throws Throwable{
+        setupSeleniumWebDrivers();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/div[1]/div/div/input"))).sendKeys("!@#$");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"subjectLine0\"]"))).sendKeys("Spam Kamy with Cucumbers");
         System.out.println("Subject and Recipient Entered \n");
     }
@@ -74,8 +96,7 @@ public class StepDefinitions {
         setupSeleniumWebDrivers();
         System.out.println("Looking for send button \n");
 
-        driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord("Hello Kamy, Hope you enjoy this cucumber picture as much as I do", Keys.CONTROL, Keys.RETURN));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[2]/div[2]"))).sendKeys(Keys.chord("Hello Kamy, Hope you enjoy this cucumber picture as much as I do. It's my favorite one. I took it myself, on a summer day, right after waking up.", Keys.CONTROL, Keys.RETURN));
 
         System.out.println("send button pressed\n");
     }
@@ -87,7 +108,11 @@ public class StepDefinitions {
 
     }
 
-
+    @Then("^I shouldn’t be able to add the image as attachement")
+    public void test72() throws Throwable{
+        setupSeleniumWebDrivers();
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"MessageBar1526\"]/span/span")));
+    }
 
     private void setupSeleniumWebDrivers() throws MalformedURLException {
         if (driver == null) {
@@ -100,9 +125,6 @@ public class StepDefinitions {
         }
     }
 
-    private boolean searchForText(String text, String textToFind) {
-        return text.contains(textToFind);
-    }
 
     private void goTo(String url) {
         if (driver != null) {
