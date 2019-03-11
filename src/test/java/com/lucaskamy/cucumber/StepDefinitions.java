@@ -44,7 +44,7 @@ public class StepDefinitions {
      *  WHEN
      */
     @When("^I press \"New Message\"")
-    public void test2() throws Throwable{
+    public void pressNew() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("Searching for compose button\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[1]/div/button"))).click();
@@ -53,7 +53,7 @@ public class StepDefinitions {
     }
 
     @When("I press \"Drafts\"")
-    public void test22() throws Throwable{
+    public void pressDrafts() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("Searching for draft button\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div[1]/div[2]/div[3]/div"))).click();
@@ -64,7 +64,7 @@ public class StepDefinitions {
      *  AND
      */
     @And("^Attach an Image")
-    public void test3() throws Throwable {
+    public void attachImage() throws Throwable {
         setupSeleniumWebDrivers();
         System.out.println("Looking for insert image\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[4]/div[2]/div[2]/div/div/div/div/div[1]/div/button/div"))).click();
@@ -79,7 +79,7 @@ public class StepDefinitions {
     }
 
     @And("^Attach an image that is too large")
-    public void test334() throws Throwable {
+    public void attachLargeImage() throws Throwable {
         setupSeleniumWebDrivers();
         System.out.println("Looking for insert image\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[4]/div[2]/div[2]/div/div/div/div/div[1]/div/button/div"))).click();
@@ -94,7 +94,7 @@ public class StepDefinitions {
     }
 
     @And("^Attach an Image as OneDrive Link")
-    public void test31() throws Throwable {
+    public void attachLink() throws Throwable {
         setupSeleniumWebDrivers();
         System.out.println("Looking for insert image\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[4]/div[2]/div[2]/div/div/div/div/div[1]/div/button/div"))).click();
@@ -109,7 +109,7 @@ public class StepDefinitions {
     }
 
     @And("^Enter a valid recipient")
-    public void test4() throws Throwable{
+    public void enterValidRecipient() throws Throwable{
         setupSeleniumWebDrivers();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/div[1]/div/div/input"))).sendKeys("kamy.moussavikafi@mail.mcgill.ca");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"subjectLine0\"]"))).sendKeys("Spam Kamy with Cucumbers");
@@ -117,7 +117,7 @@ public class StepDefinitions {
     }
 
     @And("^Enter an invalid recipient")
-    public void test41() throws Throwable{
+    public void enterInvalidRecipient() throws Throwable{
         setupSeleniumWebDrivers();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[1]/div[1]/div[1]/div[1]/div/div/div/div/div[1]/div/div/input"))).sendKeys("");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"subjectLine0\"]"))).sendKeys("Spam Kamy with Cucumbers");
@@ -125,15 +125,17 @@ public class StepDefinitions {
     }
 
     @And("^The message successfully sends")
-    public void test7() throws Throwable{
+    public void makeSureMessageIsSent() throws Throwable{
         setupSeleniumWebDrivers();
+
+        //VERIFY CONFIRMATION OF MESSAGE SENT
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div/div/div/div/div")));
 
         cleanupSeleniumWebDrivers();
     }
 
     @And("^a previous draft of my valid email exists")
-    public void test122() throws Throwable{
+    public void clickDraftEmail() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("looking for existing draft\n");
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AQAAAAAAAQ8BAAABuHB8xgAAAAA=\"]"))).click();
@@ -141,7 +143,7 @@ public class StepDefinitions {
     }
 
     @And("^an error message exists indicating that there needs to be a recipient")
-    public void test57() throws Throwable{
+    public void errorRecipient() throws Throwable{
         setupSeleniumWebDrivers();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[3]/div[2]/div/div[3]/div[1]/div/div/div/div[1]/div[1]/div[1]")));
         System.out.println("Error message found\n");
@@ -153,7 +155,7 @@ public class StepDefinitions {
      *  THEN
      */
     @Then("^I shouldn’t be able to add the image as attachment")
-    public void test72() throws Throwable{
+    public void addAttachment() throws Throwable{
         setupSeleniumWebDrivers();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"MessageBar1425\"]")));
@@ -162,7 +164,7 @@ public class StepDefinitions {
     }
 
     @Then("^I should be able to press \"Send\"")
-    public void test5() throws Throwable{
+    public void pressSend() throws Throwable{
         setupSeleniumWebDrivers();
         System.out.println("Looking for send button \n");
 
