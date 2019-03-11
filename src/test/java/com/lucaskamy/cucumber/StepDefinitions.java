@@ -22,30 +22,36 @@ public class StepDefinitions {
     private WebDriverWait wait;
     private Actions action;
     private final String PATH_TO_CHROME_DRIVER = "tools/chromedriver.exe";
-    private final String EMAIL_URL = "https://mail.google.com/mail/u/0/#inbox";
     private final String OUTLOOK_URL = "https://outlook.office.com/mail/inbox";
 
 
-    @Given("^I am on the Gmail main page")
+    @Given("^I am on the Outlook main page")
     public void loginToGmail() throws Throwable{
         setupSeleniumWebDrivers();
         goTo(OUTLOOK_URL);
-       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"i0116\"]"))).sendKeys("seyed.moussavikafi@mail.mcgill.ca");
+       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"i0116\"]"))).sendKeys("");
       driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
       wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"passwordInput\"]"))).sendKeys("");
       driver.findElement(By.xpath("//*[@id=\"submitButton\"]")).click();
       driver.findElement(By.xpath("//*[@id=\"idSIButton9\"]")).click();
     }
 
-    @When("^I press \"Compose\"")
+    @When("^I press \"Draft\"")
     public void test2() throws Throwable{
         setupSeleniumWebDrivers();
-        System.out.println("Searching for compose button\n");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[1]/div/button"))).click();
-        System.out.println("Compose button found\n");
-
+        System.out.println("Searching for draft button\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"app\"]/div/div[2]/div/div/div[1]/div[2]/div/div[1]/div/div[2]/div[4]/div"))).click();
+        System.out.println("draft button found\n");
     }
 
+    @And("^a previous draft of my valid email exists")
+    public void test12() throws Throwable{
+        setupSeleniumWebDrivers();
+        System.out.println("looking for existing draft\n");
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"AQAAAAAAAQ8BAAAB1NfL2QAAAAA=\"]"))).click();
+        System.out.println("latest message pressed\n");
+
+    }
     @And("^Attach an Image")
     public void test3() throws Throwable {
         setupSeleniumWebDrivers();
